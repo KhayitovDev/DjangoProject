@@ -1,0 +1,58 @@
+{% extends 'store/main.html' %}
+{% block content %}
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Turi</label>
+                    {{form.typee}}
+                </div>
+                <div class="form-group">
+                    <label>Kimidan</label>
+                    {{form.byWho}}
+
+                </div>
+                <div class="form-group">
+                    <label>	Summa</label>
+                    {{form.amount}}
+
+                </div>
+                <div class="form-group">
+                    <label>Valyuta</label>
+                    {{form.valuta}}
+
+                </div>
+                 <div class="form-group">
+                    <label>	Kurs</label>
+                    {{form.Kurs}}
+
+                </div>
+                 <div class="form-group">
+                    <label>	Summa</label>
+                    {{form.summa}}
+
+                </div>
+                 <div class="form-group">
+                    <label>	Kategoriya</label>
+                    {{form.category}}
+
+                </div>
+                <div class="form-group">
+                    <label>	Izoh</label>
+                    {{form.izoh}}
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><a href="{% url 'kassa' %}">Cancel</a>
+                </button>
+                <input type="submit" class="btn btn-success" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
